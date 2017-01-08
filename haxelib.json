@@ -1,0 +1,16 @@
+{
+	"name": "hxdispose",
+	"license": "MIT",
+	"tags": [
+		"dispose",
+		"disposable"
+	],
+	"classPath": "src",
+	"description": "Some stuff for help to dispose",
+	"contributors": [
+		"storm_ex"
+	],
+	"releasenote": "Initial release",
+	"version": "0.0.1",
+	"url": "https://github.com/StormEx/hxdispose"
+}

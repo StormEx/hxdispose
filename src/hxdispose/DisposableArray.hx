@@ -1,6 +1,6 @@
 package hxdispose;
 
-@:forward(push, length)
+@:forward
 abstract DisposableArray<T:IDisposable>(Array<T>) from Array<T> to Array<T> {
 	public function new(arr:Array<T>) {
 		this = arr;

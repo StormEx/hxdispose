@@ -12,6 +12,5 @@ abstract DisposableArray<T:IDisposable>(Array<T>) from Array<T> to Array<T> {
 		for(e in this) {
 			Dispose.dispose(e);
 		}
-		this = null;
 	}
 }

@@ -16,8 +16,10 @@ class Dispose {
 		return macro {
 			if($val != null) {
 				for(i in $val) {
-					i.dispose();
-					i = null;
+					if(i == null) {
+						i.dispose();
+						i = null;
+					}
 				}
 				$val = null;
 			}

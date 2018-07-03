@@ -1,5 +1,6 @@
 package ;
 
+import hxmake.idea.IdeaData;
 import hxmake.haxelib.HaxelibExt;
 import hxmake.test.TestTask;
 import hxmake.idea.IdeaPlugin;
@@ -9,7 +10,7 @@ using hxmake.haxelib.HaxelibPlugin;
 
 class HxDisposeMake extends hxmake.Module {
 	function new() {
-		config.classPath = ["src"];
+		config.classPath = ["src", "example"];
 		config.testPath = ["test"];
 		config.devDependencies = [
 			"utest" => "haxelib"
@@ -17,6 +18,11 @@ class HxDisposeMake extends hxmake.Module {
 
 		apply(HaxelibPlugin);
 		apply(IdeaPlugin);
+
+		update("idea", function(data:IdeaData) {
+			data.addHaxeRun("bin/disposable.swf");
+			data.hxml = "example/build.hxml";
+		});
 
 		library(
 			function(ext:HaxelibExt) {

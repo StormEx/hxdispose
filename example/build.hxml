@@ -1,0 +1,16 @@
+-main hxdispose.example.Main
+
+-cp example
+-cp src
+
+-dce full
+
+--times
+
+-swf-header 300:100:60:000000
+-swf-version 11.5
+-swf bin/disposable.swf
+
+-D fdb
+
+-debug

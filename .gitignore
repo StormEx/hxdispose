@@ -10,3 +10,6 @@ _assets/
 out/
 classes/
 **/*.iml
+
+# hxmake
+make.n
